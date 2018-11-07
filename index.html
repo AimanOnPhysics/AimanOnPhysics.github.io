@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="Aiman Al-Eryani" content="" />
+
+    <script src="libraries/jquery.min.js"></script>
+    <script src="libraries/sylvester.js"></script>
+    <script src="libraries/three.min.js"></script>
+    <script src="libraries/OrbitControls.js"></script>
+    <script src="simulationscript.js"></script>
+  </head>
+
+  <body onload="init()">
+    <div id="container"></div>
+            <br>
+    <Button id="repeat" onclick="reset_parameters()" />Refresh</button>
+    <br>
+    Particle count: <span id="ion_countl">300</span><input id="ion_count" type="range" min="10" max="5000" step="10" value="300" onchange="onchange_count(this);onchange_life();">
+    <br>
+    Wind particle mass: <span id="massl">1</span><input id="mass" type="range" min="0.1" max="5" step="0.1" value="1" onchange="onchange_mass(this)">
+    <br>
+    Earth magnetic moment: <span id="momentl">13</span><input id="moment" type="range" min="1" max="100" step="1" value="13" onchange="onchange_moment(this)">
+    <br>
+    Wind particle delta angle [degrees]: <span id="anglel">0</span><input id="angle" type="range" min="0" max="90" step="1" value="0" onchange="onchange_angle(this)">
+    <br>
+    Wind particle charge: <span id="chargel">1</span><input id="charge" type="range" min="0.1" max="5" step="0.1" value="1" onchange="onchange_charge(this)">
+    Wind particle speed: <span id="velocitiesl">8</span><input id="velocities" type="range" min="0.1" max="12" step="0.1" value="8" onchange="onchange_velocities(this)">
+    <br>
+    Mass flowrate: <span id="massflowl">100</span><input id="massflow" type="range" min="10" max="200" step="1" value="100" onchange="onchange_life(this)">
+    Wind flux side length: <span id="aperaturel">50</span><input id="aperature" type="range" min="20" max="300" step="10" value="50" onchange="onchange_aperature(this)">
+    <br>
+  </body>
+</html>
+
